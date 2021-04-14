@@ -12,10 +12,10 @@ export default makeStyles(() => ({
     marginBottom:'2rem',
   },
   text:{
-      marginLeft:'4rem',
+      marginLeft:'3rem',
   },
   button:{
-      marginRight:'4rem',
+      marginRight:'3rem',
       color:'lightblue !important',
   }
 }));

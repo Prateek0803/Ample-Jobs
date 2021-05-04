@@ -1,27 +1,26 @@
 import React from "react";
-import { Box, Grid, Typography, Button } from "@material-ui/core";
+import {  Grid, Typography, Button } from "@material-ui/core";
 import useStyles from "./styles";
-const JobCards = () => {
-  const skills = ["Javascript", "react", "nodejs", "redux", "Rest Api"];
+const JobCards = (props) => {
   const classes = useStyles();
   return (
     <Grid className={classes.JobCard}>
       <Grid container>
         <Grid item xs container className={classes.JobCard__roleContent}>
           <Grid item>
-            <Typography variant="subtitle1">Frontend Developer</Typography>
+            <Typography variant="subtitle1">{props.title}</Typography>
           </Grid>
           <Grid item>
             <Typography
               variant="subtitle2"
               className={classes.roleContent__companyName}
             >
-              Razorpay
+              {props.companyName}
             </Typography>
           </Grid>
         </Grid>
         <Grid item xs container className={classes.JobCard__skillsContent}>
-          {skills.map((s) => (
+          {props.skills.map((s) => (
             <Grid item key={s}>
               <Typography className={classes.skill}>{s}</Typography>
             </Grid>
@@ -36,7 +35,7 @@ const JobCards = () => {
         >
           <Grid item>
             <Typography variant="caption">
-              25 min ago | Full Time | Remote{" "}
+                {props.type} | {props.location}
             </Typography>
           </Grid>
           <Grid item>

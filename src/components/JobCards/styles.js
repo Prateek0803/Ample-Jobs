@@ -33,7 +33,7 @@ export default makeStyles(() => ({
     padding: "6px",
     display: "inline-block",
     backgroundColor: "lightGrey",
-    borderRadius: "15px",
+    borderRadius: "5px",
     fontWeight: "600",
     transition:'.3s',
     cursor:'pointer',

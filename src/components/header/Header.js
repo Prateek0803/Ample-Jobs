@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Button } from "@material-ui/core";
 import useStyles from "./styles";
-const Header = () => {
+const Header = ({showModal}) => {
   const classes = useStyles();
   return (
     <Box width="100%" py={6} className={classes.header}>
@@ -14,7 +14,7 @@ const Header = () => {
         <Typography className={classes.text} variant="h5">
           Job List
         </Typography>
-        <Button variant="outlined" className={classes.button} color="primary">
+        <Button variant="outlined" onClick={showModal} className={classes.button} color="primary">
           Post Job
         </Button>
       </Box>
